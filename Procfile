@@ -1,0 +1,1 @@
+web: gunicorn wallet_system.wsgi --log-file -
