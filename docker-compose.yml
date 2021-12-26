@@ -1,0 +1,25 @@
+version: "3.9"
+
+services:
+  db:
+    restart: always
+    image: postgres:latest
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB:       ${NAME}
+      POSTGRES_USER:     ${USER}
+      POSTGRES_PASSWORD: ${PASSWORD}
+    volumes:
+      - ./data/postgres:/var/lib/postgresql/data
+  web:
+    build: .
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/walletsystem
+    ports:
+      - "8000:8000"
+    
+    depends_on:
+      - db
+  
