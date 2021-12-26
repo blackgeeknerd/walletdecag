@@ -9,8 +9,8 @@ class TestRegisterAdmin(APITestCase):
         self.data = {
             "firstname":"Admin",
             "lastname": "User",
-            "email": "testadmin@walletsystem.com",
-            "password": "01234Admin"
+            "email": "admintest@walletsystem.com",
+            "password": "striker1234"
         }
 
     def test_create_admin(self):

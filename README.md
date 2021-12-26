@@ -55,8 +55,8 @@ A wallet system for a product used in multiple countries.
 - Hit the login endpoint using the following admin credentials
 
 ```
-email= testadmin@walletsystem.com
-password= 01234Admin
+email= admintest@walletsystem.com,
+password= striker1234
 ```
 
 - Or hit the register admin endpoint to register an admin.
