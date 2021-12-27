@@ -5,7 +5,12 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework.permissions import AllowAny, IsAuthenticated
 from rest_framework.authtoken.models import Token
-from rest_framework import status
+from rest_framework import status, generics
+
+from django.http import HttpResponse
+
+from .serializers import UserSerializer
+
 
 from .models import User, Elite, Noob, Wallet, Transactions
 from . import serializers
@@ -16,6 +21,11 @@ import requests
 
 
 # Register User View
+message = "A Simple Wallet System, built with django rest framework, gunicorn, docker and hosted on heroku"
+def homePageView(request):
+    return HttpResponse(message)
+
+
 class Register(APIView):
     permission_classes = [AllowAny]
 
@@ -917,3 +927,12 @@ class DemoteUser(APIView):
                         success,
                         status=status.HTTP_200_OK
                     )
+
+
+class UserList(generics.ListCreateAPIView):
+    queryset = User.objects.all()
+    serializer_class = UserSerializer
+
+class UserDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = User.objects.all()
+    serializer_class = UserSerializer

@@ -43,6 +43,7 @@ A wallet system for a product used in multiple countries.
 
 ### How to Use and Test this Application
 - Clone the Repository
+- Create a .env file & fill in the values accordingly
 - Run `docker-compose up --build`
 - run migrations `docker-compose exec web python manage.py makemigrations`
 - run `docker-compose exec web python manage.py migrate`
@@ -55,8 +56,8 @@ A wallet system for a product used in multiple countries.
 - Hit the login endpoint using the following admin credentials
 
 ```
-email= admintest@walletsystem.com,
-password= striker1234
+email= seyi@test.com
+password= striker
 ```
 
 - Or hit the register admin endpoint to register an admin.
@@ -69,6 +70,8 @@ password= striker1234
 https://documenter.getpostman.com/view/11737108/TVzVgvQH
 
 ### Link to Heroku
-https://wallets-system.herokuapp.com/api
+https://walletdecag.herokuapp.com
+https://walletdecag.herokuapp.com/api
+https://walletdecag.herokuapp.com/admin
 
 ### Comments

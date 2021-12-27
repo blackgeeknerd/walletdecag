@@ -35,6 +35,7 @@ REST_FRAMEWORK = {
         'rest_framework.authentication.BasicAuthentication',
         'rest_framework.authentication.SessionAuthentication',
         'rest_framework.authentication.TokenAuthentication',
+        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
     ]
 }
 
@@ -48,11 +49,12 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'wallet',
+    'drf_yasg',
+    'rest_framework',
     'rest_framework.authtoken',
 ]
 
 MIDDLEWARE = [
-    # 'whitenoise.storage.CompressedManifestStaticFilesStorage'
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -65,6 +67,7 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'config.settings.urls'
 
+#added for heroku deployment
 django_heroku.settings(locals())
 
 TEMPLATES = [
@@ -83,16 +86,14 @@ TEMPLATES = [
     },
 ]
 
-# WSGI_APPLICATION = 'config.settings.wsgi.application'
+
 # WSGI_APPLICATION = 'config.settings.wsgi.application'
 
 AUTH_USER_MODEL = 'wallet.User'
 
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
-# if DEBUG is False:
-#     DATABASES = {'default': dj_database_url.config(conn_max_age=60)}
-# else:
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
@@ -151,7 +152,6 @@ STATICFILES_DIRS = (
 )
 
 #  Add configuration for static files storage using whitenoise
-# STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 # STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
 
