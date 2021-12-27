@@ -66,9 +66,6 @@ password= striker
 - Hit the demote user endpoint to demote an Elite.
 - Hit the approve transactions endpoint to approve withdrawal transactions for Noob users.
 
-### Link to API Documentation
-https://documenter.getpostman.com/view/11737108/TVzVgvQH
-
 ### Link to Heroku
 - https://walletdecag.herokuapp.com
 - https://walletdecag.herokuapp.com/api
