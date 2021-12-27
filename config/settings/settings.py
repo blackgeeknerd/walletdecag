@@ -50,7 +50,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'wallet',
     # 'drf_yasg',
-    # 'drf_yasg2',
+    'drf_yasg2',
     'rest_framework',
     'rest_framework.authtoken',
 ]
