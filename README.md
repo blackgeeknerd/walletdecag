@@ -70,8 +70,8 @@ password= striker
 https://documenter.getpostman.com/view/11737108/TVzVgvQH
 
 ### Link to Heroku
-https://walletdecag.herokuapp.com
-https://walletdecag.herokuapp.com/api
-https://walletdecag.herokuapp.com/admin
+- https://walletdecag.herokuapp.com
+- https://walletdecag.herokuapp.com/api
+- https://walletdecag.herokuapp.com/admin
 
 ### Comments
