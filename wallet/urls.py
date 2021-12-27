@@ -1,6 +1,6 @@
 from django.urls import path
 from django.views.generic import TemplateView
-from rest_framework.urlpatterns import format_suffix_patterns
+# from rest_framework.urlpatterns import format_suffix_patterns
 from .views import Register, Login, Wallets, FundWallet, TransactionView, WithdrawWallet, RegisterAdmin,\
     PendingWithdrawal, ApproveWithdrawal, PromoteUser, DemoteUser
 from . import views
