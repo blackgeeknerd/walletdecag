@@ -49,8 +49,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'wallet',
-    # 'drf_yasg',
-    'drf_yasg2',
     'rest_framework',
     'rest_framework.authtoken',
 ]
