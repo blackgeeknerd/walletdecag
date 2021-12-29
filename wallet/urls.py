@@ -26,6 +26,6 @@ urlpatterns = [
     path('demote-user', DemoteUser.as_view(), name='demote_user'),
     
     
-     
+       
 ]
 

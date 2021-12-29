@@ -20,7 +20,6 @@ from rest_framework import permissions
 
 
 urlpatterns = [
-    path("", include('wallet.urls')),
     path('admin/', admin.site.urls),
     path('api/', include('wallet.urls')),
 
