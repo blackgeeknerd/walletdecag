@@ -28,7 +28,7 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', cast=bool)
 
-ALLOWED_HOSTS = ['*', 'walletdecag.herokuapp.com']
+ALLOWED_HOSTS = ['*']
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [

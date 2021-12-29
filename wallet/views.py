@@ -9,7 +9,7 @@ from rest_framework import status, generics
 
 from django.http import HttpResponse
 
-from .serializers import UserSerializer
+# from .serializers import UserSerializer
 
 
 from .models import User, Elite, Noob, Wallet, Transactions
@@ -929,10 +929,10 @@ class DemoteUser(APIView):
                     )
 
 
-class UserList(generics.ListCreateAPIView):
-    queryset = User.objects.all()
-    serializer_class = UserSerializer
+# class UserList(generics.ListCreateAPIView):
+#     queryset = User.objects.all()
+#     serializer_class = UserSerializer
 
-class UserDetail(generics.RetrieveUpdateDestroyAPIView):
-    queryset = User.objects.all()
-    serializer_class = UserSerializer
+# class UserDetail(generics.RetrieveUpdateDestroyAPIView):
+#     queryset = User.objects.all()
+#     serializer_class = UserSerializer

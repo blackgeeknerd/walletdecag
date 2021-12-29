@@ -3,15 +3,15 @@ from django.views.generic import TemplateView
 # from rest_framework.urlpatterns import format_suffix_patterns
 from .views import Register, Login, Wallets, FundWallet, TransactionView, WithdrawWallet, RegisterAdmin,\
     PendingWithdrawal, ApproveWithdrawal, PromoteUser, DemoteUser
-from . import views
-from .views import homePageView
+# from . import views
+# from .views import homePageView
 
 
 # app_name = "wallet_app"
 
 urlpatterns = [
-    path("", homePageView, name="home"),
-    path("api/", views.UserList.as_view()),
+    # path("", homePageView, name="home"),
+    # path("api/", views.UserList.as_view()),
     path('register', Register.as_view(), name='register_user'),
     path('login', Login.as_view(), name='login_user'),
     path('add_wallet', Wallets.as_view(), name='add_user_wallet'),
