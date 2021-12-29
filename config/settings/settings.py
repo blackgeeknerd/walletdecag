@@ -68,7 +68,7 @@ MIDDLEWARE = [
 ROOT_URLCONF = 'config.settings.urls'
 
 #added for heroku deployment
-django_heroku.settings(locals())
+# django_heroku.settings(locals())
 
 TEMPLATES = [
     {
