@@ -13,7 +13,8 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 import os
 from pathlib import Path
 from decouple import config
-import django_heroku
+import dj_database_url 
+# import django_heroku
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -49,7 +50,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'wallet',
-    'rest_framework',
+    # 'rest_framework',
     'rest_framework.authtoken',
 ]
 
@@ -92,8 +93,7 @@ AUTH_USER_MODEL = 'wallet.User'
 
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
-import dj_database_url 
-prod_db  =  dj_database_url.config(conn_max_age=500)
+# prod_db  =  dj_database_url.config(conn_max_age=500)
 # DATABASES['default'].update(prod_db)
 if DEBUG is False:
     DATABASES = {'default': dj_database_url.config(conn_max_age=60)}
