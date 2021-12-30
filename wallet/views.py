@@ -3,7 +3,7 @@ from django.contrib.auth.hashers import check_password
 
 from rest_framework.views import APIView
 from rest_framework.response import Response
-from rest_framework.permissions import AllowAny, IsAuthenticated
+from rest_framework.permissions import AllowAny, IsAuthenticated, IsAuthenticatedOrReadOnly
 from rest_framework.authtoken.models import Token
 from rest_framework import status, generics
 
@@ -154,7 +154,8 @@ class Login(APIView):
 
 # Add Wallet and Get all Wallet View
 class Wallets(APIView):
-    permission_classes = [IsAuthenticated]
+    # permission_classes = [IsAuthenticated]
+    permission_classes = [IsAuthenticatedOrReadOnly]
 
     # Add a wallet for Elite Users
     def post(self, request):
