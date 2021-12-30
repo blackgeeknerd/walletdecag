@@ -39,6 +39,9 @@ class Elite(models.Model):
     main_currency = models.CharField(max_length=100, null=False)
     created_at = models.DateTimeField(auto_now=False, default=timezone.now)
     updated_at = models.DateTimeField(auto_now=True)
+    
+    def __str__(self):
+        return self.id
 
 
 class Noob(models.Model):
