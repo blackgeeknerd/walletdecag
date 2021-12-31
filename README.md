@@ -71,4 +71,7 @@ password= striker
 - https://walletdecag.herokuapp.com/api
 - https://walletdecag.herokuapp.com/admin
 
+## Link to API Documentation
+https://documenter.getpostman.com/view/2920412/UVRGF4UE
+
 ### Comments
