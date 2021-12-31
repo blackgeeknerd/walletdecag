@@ -10,7 +10,6 @@ import uuid
 # Create your models here.
 class User(AbstractUser):
     username = None
-    
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     firstname = models.CharField(max_length=100, null=False)
     lastname = models.CharField(max_length=100, null=False)
@@ -20,17 +19,12 @@ class User(AbstractUser):
     is_superadmin = models.BooleanField(default=False)
     created_at = models.DateTimeField(auto_now=False, default=timezone.now)
     updated_at = models.DateTimeField(auto_now=True)
-    
 
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = []
 
-    
     objects = UserManager()
     
-    def __str__(self):
-        return self.id
-
 
 class Elite(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
@@ -40,10 +34,7 @@ class Elite(models.Model):
     created_at = models.DateTimeField(auto_now=False, default=timezone.now)
     updated_at = models.DateTimeField(auto_now=True)
     
-    def __str__(self):
-        return self.id
-
-
+    
 class Noob(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     user_id = models.OneToOneField(User, on_delete=models.CASCADE)
@@ -52,10 +43,7 @@ class Noob(models.Model):
     created_at = models.DateTimeField(auto_now=False, default=timezone.now)
     updated_at = models.DateTimeField(auto_now=True)
     
-    def __str__(self):
-        return self.id
-    
-    
+
 
 
 class Wallet(models.Model):
